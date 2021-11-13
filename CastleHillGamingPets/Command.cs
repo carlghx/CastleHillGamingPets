@@ -18,14 +18,13 @@ namespace CastleHillGamingPets
         }
 
         public static Command ParseFromInput(string input)
-        {
-            
+        {            
             if (input == null)
             {
                 throw new ArgumentNullException();
             }
 
-            var split = input.Trim().Split(' ');
+            var split = input.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             var newCommand = new Command(split[0], split.Skip(1).ToList());
             return newCommand;
         }
@@ -39,7 +38,5 @@ namespace CastleHillGamingPets
 
             return null;
         }
-
-
     }
 }

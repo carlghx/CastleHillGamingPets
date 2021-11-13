@@ -49,6 +49,8 @@ namespace CastleHillGamingPets.Pets
         
         public virtual bool TryInteract(eInteraction interaction)
         {
+            // this feels a bit weird since it's > in one case and <= in the other, but following what the design doc says
+            // 5. If a pet’s hunger level gets above the Max Hunger value or their Happiness gets to 0 or below, ...
             if (Hunger > HungerThreshold || Happiness <= 0)
             {
                 return false;

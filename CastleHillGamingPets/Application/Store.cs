@@ -40,7 +40,7 @@ namespace CastleHillGamingPets.Application
                     if (DogCount > 0)
                     {
                         DogCount--;
-                        Console.WriteLine($"Adding a dog. Store has {DogCount} left.");
+                        Console.WriteLine($"Adding a {PetNames.Dog}. Store has {DogCount} left.");
                         return new Dog()
                         {
                             Name = name
@@ -51,7 +51,7 @@ namespace CastleHillGamingPets.Application
                     if (CatCount > 0)
                     {
                         CatCount--;
-                        Console.WriteLine($"Adding a cat. Store has {CatCount} left.");
+                        Console.WriteLine($"Adding a {PetNames.Cat}. Store has {CatCount} left.");
                         return new Cat()
                         {
                             Name = name
@@ -62,7 +62,7 @@ namespace CastleHillGamingPets.Application
                     if (PlantCount > 0)
                     {
                         PlantCount--;
-                        Console.WriteLine($"Adding a plant. Store has {PlantCount} left.");
+                        Console.WriteLine($"Adding a {PetNames.Plant}. Store has {PlantCount} left.");
                         return new Plant()
                         {
                             Name = name
@@ -73,7 +73,7 @@ namespace CastleHillGamingPets.Application
                     if (FishCount > 0)
                     {
                         FishCount--;
-                        Console.WriteLine($"Adding a fish. Store has {FishCount} left.");
+                        Console.WriteLine($"Adding a {PetNames.Fish}. Store has {FishCount} left.");
                         return new Fish()
                         {
                             Name = name

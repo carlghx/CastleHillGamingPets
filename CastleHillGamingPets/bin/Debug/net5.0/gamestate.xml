@@ -2,7 +2,7 @@
 <AppState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Store>
     <DogCount>1</DogCount>
-    <CatCount>2</CatCount>
+    <CatCount>1</CatCount>
     <PlantCount>2</PlantCount>
     <FishCount>2</FishCount>
   </Store>
@@ -14,6 +14,13 @@
       <Hunger>2</Hunger>
       <HungerThreshold>10</HungerThreshold>
     </Pet>
+    <Pet xsi:type="Cat">
+      <Name>c</Name>
+      <Happiness>4</Happiness>
+      <MaxHappiness>5</MaxHappiness>
+      <Hunger>2</Hunger>
+      <HungerThreshold>8</HungerThreshold>
+    </Pet>
   </Pets>
-  <TimeElapsedMinutes>1</TimeElapsedMinutes>
+  <TimeElapsedMinutes>2</TimeElapsedMinutes>
 </AppState>

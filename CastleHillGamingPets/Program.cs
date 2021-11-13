@@ -28,8 +28,7 @@ namespace CastleHillGamingPets
                 var input = Console.ReadLine();
                 var command = Command.ParseFromInput(input);
                 HandleCommand(command);
-            }
-            
+            }            
         }
 
         private static void Init()
@@ -163,7 +162,7 @@ namespace CastleHillGamingPets
             }
             else 
             {
-                Console.WriteLine($"Removing {pet.GetType()} {pet.Name}");
+                Console.WriteLine($"Removing {pet.PetType} {pet.Name}");
                 app.Pets.Remove(pet);
                 app.TimePasses(TimeCosts.RemovePet);
             }
