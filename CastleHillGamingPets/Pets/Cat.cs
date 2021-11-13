@@ -18,10 +18,7 @@ namespace CastleHillGamingPets.Pets
             Happiness = 4;
         }
 
-        public override string GetPetType()
-        {
-            return "Cat";
-        }
+        public override string GetPetType => "Cat";
 
         public override void Eat(eFood food)
         {

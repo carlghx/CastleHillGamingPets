@@ -44,7 +44,7 @@ namespace CastleHillGamingPets.Pets
         protected abstract long TimerInterval { get; }
         protected long TimeSinceLastDecay;
 
-        public abstract string GetPetType();
+        public abstract string GetPetType { get; }
         public abstract void Eat(eFood food);
         public abstract void Interact(eInteraction interaction);
         public virtual void TimePasses(long minutes)
@@ -60,7 +60,7 @@ namespace CastleHillGamingPets.Pets
 
             if (changed)
             {
-                Console.WriteLine($"{GetPetType()} {Name} is getting hungry. Happiness {Happiness} and Hunger {Hunger}");
+                Console.WriteLine($"{GetPetType} {Name} is getting hungry. Happiness {Happiness} and Hunger {Hunger}");
             }
         }
 
