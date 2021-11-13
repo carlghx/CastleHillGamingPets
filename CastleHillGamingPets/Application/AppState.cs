@@ -16,6 +16,17 @@ namespace CastleHillGamingPets.Application
 
         public long TimeElapsedMinutes { get; set; }
 
+        public static AppState BuildNewAppState()
+        {
+            var app = new AppState();
+            app.Store = new Store();
+            app.Store.Restock();
+
+            app.Pets = new List<Pet>();
+
+            return app;
+        }
+
         public void TimePasses(long minutes)
         {
             Console.WriteLine($"Time passes: {minutes}");
@@ -27,17 +38,6 @@ namespace CastleHillGamingPets.Application
             {
                 p.TimePasses(minutes);
             }
-        }
-
-        public static AppState BuildNewAppState()
-        {
-            var app = new AppState();
-            app.Store = new Store();
-            app.Store.Restock();
-
-            app.Pets = new List<Pet>();
-
-            return app;
         }
 
         public Pet FindPetByName(string name)

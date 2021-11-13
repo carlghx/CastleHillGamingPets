@@ -13,11 +13,11 @@ namespace CastleHillGamingPets
 
         static void Main(string[] args)
         {
-            Init();
+            InitAppState();
 
             Console.WriteLine("Starting Castle Hill Gaming Pets App");
             Console.WriteLine();
-            Console.WriteLine("Type help for command list");
+            Console.WriteLine($"Type {CommandNames.Help} for command list");
             Console.WriteLine();
             Collection();
 
@@ -31,7 +31,7 @@ namespace CastleHillGamingPets
             }            
         }
 
-        private static void Init()
+        private static void InitAppState()
         {
             var existing = AppStateLoader.LoadState();
 
@@ -232,11 +232,11 @@ namespace CastleHillGamingPets
 
             Console.WriteLine("");
             Console.WriteLine($"{CommandNames.Store}|{CommandAliases.Store}");
-            Console.WriteLine("list pets in store");
+            Console.WriteLine("List pets that are available in store");
 
             Console.WriteLine("");
             Console.WriteLine($"{CommandNames.Collection}|{CommandAliases.Collection}");
-            Console.WriteLine("list pets that you own");
+            Console.WriteLine("List pets that you own");
 
             Console.WriteLine("");
             Console.WriteLine($"{CommandNames.Add}|{CommandAliases.Add} (dog|cat|plant|fish) petname");
