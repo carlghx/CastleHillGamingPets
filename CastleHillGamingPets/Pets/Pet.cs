@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace CastleHillGamingPets.Pets
@@ -46,7 +45,19 @@ namespace CastleHillGamingPets.Pets
 
         public abstract string PetType { get; }
         public abstract void Eat(eFood food);
-        public abstract bool Interact(eInteraction interaction);
+        protected abstract void Interact(eInteraction interaction);
+        
+        public virtual bool TryInteract(eInteraction interaction)
+        {
+            if (Hunger > HungerThreshold || Happiness <= 0)
+            {
+                return false;
+            }
+
+            Interact(interaction);
+            return true;
+        }
+
         public virtual void TimePasses(long minutes)
         {
             TimeSinceLastDecay += minutes;

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CastleHillGamingPets.Pets
 {
@@ -42,9 +41,31 @@ namespace CastleHillGamingPets.Pets
             }
         }
 
-        public override bool Interact(eInteraction interaction)
+        protected override void Interact(eInteraction interaction)
         {
-            return true;
+            switch (interaction)
+            {
+                case eInteraction.Rub:
+                    Hunger++;
+                    Happiness++;
+                    Console.WriteLine($"{PetType} {Name} likes {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                case eInteraction.Play:
+                    Hunger += 3;
+                    Happiness += 2;
+                    Console.WriteLine($"{PetType} {Name} likes {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                case eInteraction.Scold:
+                    Hunger += 2;
+                    Happiness -= 2;
+                    Console.WriteLine($"{PetType} {Name} responds to {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                default:
+                    Hunger += 2;
+                    Happiness -= 2;
+                    Console.WriteLine($"{PetType} {Name} dislikes {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+            }
         }
 
     }

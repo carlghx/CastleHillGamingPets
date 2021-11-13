@@ -1,9 +1,9 @@
-﻿using CastleHillGamingPets.Consts;
+﻿using CastleHillGamingPets.Application;
+using CastleHillGamingPets.Consts;
 using CastleHillGamingPets.Pets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CastleHillGamingPets.Application;
 
 namespace CastleHillGamingPets
 {
@@ -113,7 +113,10 @@ namespace CastleHillGamingPets
                 return;
             }
 
-            pet.Interact(interaction);
+            if (!pet.TryInteract(interaction))
+            {
+                Console.WriteLine($"{pet.PetType} {pet.Name} doesn't want to play right now. Try feeding them.");
+            }
             app.TimePasses(TimeCosts.InteractPet);
         }
 

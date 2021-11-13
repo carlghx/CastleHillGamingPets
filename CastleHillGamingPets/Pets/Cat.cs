@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CastleHillGamingPets.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CastleHillGamingPets.Pets
 {
@@ -43,10 +43,46 @@ namespace CastleHillGamingPets.Pets
             }
         }
 
-        public override bool Interact(eInteraction interaction)
+        protected override void Interact(eInteraction interaction)
         {
-            return true;
+            switch (interaction)
+            {
+                case eInteraction.Pet:
+                    LolCat();
+                    break;
+                case eInteraction.Ignore:
+                    Hunger++;
+                    Happiness += 2;
+                    Console.WriteLine($"{PetType} {Name} likes {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                case eInteraction.Scold:
+                    Hunger += 2;
+                    Happiness -= 2;
+                    Console.WriteLine($"{PetType} {Name} responds to {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                default:
+                    Hunger += 2;
+                    Happiness -= 2;
+                    Console.WriteLine($"{PetType} {Name} dislikes {interaction}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+            }
         }
 
+        private void LolCat()
+        {
+            var rand = RNG.Random.Next(100);
+            if (rand > 50)
+            {
+                Console.WriteLine($"{PetType} {Name} randomly likes you. Happiness {Happiness} and Hunger {Hunger}");
+                Hunger++;
+                Happiness++;
+            }
+            else
+            {
+                Console.WriteLine($"{PetType} {Name} randomly dislikes you. Happiness {Happiness} and Hunger {Hunger}");
+                Hunger += 2;
+                Happiness -= 2;
+            }
+        }
     }
 }
