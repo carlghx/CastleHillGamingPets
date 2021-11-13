@@ -12,20 +12,40 @@ namespace CastleHillGamingPets.Pets
 
         public Cat()
         {
-            HungerThreshold = 8;
             MaxHappiness = 5;
-            Hunger = 2;
+            HungerThreshold = 8;            
+
             Happiness = 4;
+            Hunger = 2;            
         }
 
-        public override string GetPetType => "Cat";
+        public override string PetType => "Cat";
 
         public override void Eat(eFood food)
         {
+            switch (food)
+            {
+                case eFood.CatFood:
+                    Hunger = Hunger / 2;
+                    Happiness++;
+                    Console.WriteLine($"{PetType} {Name} likes {food}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                case eFood.Tuna:
+                    Hunger = 0;
+                    Happiness += 3;
+                    Console.WriteLine($"{PetType} {Name} likes {food}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+                default:
+                    Hunger += 2;
+                    Happiness -= 2;
+                    Console.WriteLine($"{PetType} {Name} dislikes {food}. Happiness {Happiness} and Hunger {Hunger}");
+                    break;
+            }
         }
 
-        public override void Interact(eInteraction interaction)
+        public override bool Interact(eInteraction interaction)
         {
+            return true;
         }
 
     }

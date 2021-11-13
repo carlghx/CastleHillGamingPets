@@ -179,7 +179,7 @@ namespace CastleHillGamingPets
             
             foreach (var pet in app.Pets)
             {
-                Console.WriteLine($"{pet.GetPetType} {pet.Name} Happiness: {pet.Happiness} Hunger: {pet.Hunger}");
+                Console.WriteLine($"{pet.PetType} {pet.Name} Happiness: {pet.Happiness} Hunger: {pet.Hunger}");
             }
         }
 

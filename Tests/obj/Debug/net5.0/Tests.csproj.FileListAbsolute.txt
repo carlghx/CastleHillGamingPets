@@ -99,3 +99,10 @@ C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\obj\Debug\net5.0
 C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\obj\Debug\net5.0\ref\Tests.dll
 C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\obj\Debug\net5.0\Tests.pdb
 C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\obj\Debug\net5.0\Tests.genruntimeconfig.cache
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.deps.json
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.runtimeconfig.json
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.runtimeconfig.dev.json
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.exe
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.dll
+C:\Users\carlmorita\Documents\GitHub\CastleHillGamingPets\Tests\bin\Debug\net5.0\CastleHillGamingPets.pdb
