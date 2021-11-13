@@ -25,6 +25,10 @@ namespace CastleHillGamingPets
             }
 
             var split = input.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            if (!split.Any())
+            {
+                throw new ArgumentException();
+            }
             var newCommand = new Command(split[0], split.Skip(1).ToList());
             return newCommand;
         }
@@ -37,6 +41,14 @@ namespace CastleHillGamingPets
             }
 
             return null;
+        }
+
+        public int ArgCount
+        {
+            get
+            {
+                return _args?.Count ?? 0;
+            }
         }
     }
 }

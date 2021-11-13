@@ -41,11 +41,7 @@ namespace CastleHillGamingPets
             }
             else
             {
-                app = new AppState();
-                app.Store = new Store();
-                app.Store.Restock();
-
-                app.Pets = new List<Pet>();
+                app = AppState.BuildNewAppState();
             }
         }
 
@@ -86,6 +82,7 @@ namespace CastleHillGamingPets
                     break;
                 default:
                     Console.WriteLine($"Invalid command: {command.Name}");
+                    Console.WriteLine($"Type {CommandNames.Help} or {CommandAliases.Help} for commands");
                     break;
             }
         }
@@ -100,7 +97,7 @@ namespace CastleHillGamingPets
                 return;
             }
 
-            var pet = app.Pets.FirstOrDefault(p => string.Equals(p.Name, petName, StringComparison.InvariantCultureIgnoreCase));
+            var pet = app.FindPetByName(petName);
             if (pet == null)
             {
                 Console.WriteLine($"No pet with name found: {petName}");
@@ -130,7 +127,7 @@ namespace CastleHillGamingPets
                 return;
             }
 
-            var pet = app.Pets.FirstOrDefault(p => string.Equals(p.Name, petName, StringComparison.InvariantCultureIgnoreCase));
+            var pet = app.FindPetByName(petName);
             if (pet == null)
             {
                 Console.WriteLine($"No pet with name found: {petName}");
@@ -155,7 +152,7 @@ namespace CastleHillGamingPets
                 return;
             }
 
-            var pet = app.Pets.FirstOrDefault(p => string.Equals(p.Name, name, StringComparison.InvariantCultureIgnoreCase));
+            var pet = app.FindPetByName(name);
             if (pet == null)
             {
                 Console.WriteLine($"No pet with name found: {name}");
@@ -188,15 +185,15 @@ namespace CastleHillGamingPets
         private static void Add(Command command)
         {
             var petType = command.GetArg(0)?.ToLower();
-            var name = command.GetArg(1);
-            if (string.IsNullOrEmpty(name))
+            var petName = command.GetArg(1);
+            if (string.IsNullOrEmpty(petName))
             {
                 Console.WriteLine($"Pet needs a name. Example format is {CommandNames.Add} dog spot");
                 return;
             }
-            else if (app.Pets.Any(p => string.Equals(p.Name, name, StringComparison.InvariantCultureIgnoreCase)))
+            else if (app.FindPetByName(petName) != null)
             {
-                Console.WriteLine($"Pet name is already in use: {name}");
+                Console.WriteLine($"Pet name is already in use: {petName}");
                 return;
             }
 
@@ -206,17 +203,7 @@ namespace CastleHillGamingPets
                 case PetNames.Cat:
                 case PetNames.Plant:
                 case PetNames.Fish:
-                    var pet = app.Store.Buy(petType, name);
-                    if (pet == null)
-                    {
-                        Console.WriteLine($"Unable to buy pet {petType}; store is out of stock.");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{name} added to collection");
-                        app.TimePasses(TimeCosts.BuyPet);
-                        app.Pets.Add(pet);                        
-                    }
+                    app.TryBuyPet(petType, petName);
                     break;
                 default:
                     Console.WriteLine($"Invalid pet type: {petType}");
@@ -235,7 +222,6 @@ namespace CastleHillGamingPets
 
         private static void Exit()
         {
-            // possible todo: save state?
             AppStateLoader.SaveState(app);
             Environment.Exit(0);
         }
@@ -270,7 +256,7 @@ namespace CastleHillGamingPets
 
             Console.WriteLine("");
             Console.WriteLine($"{CommandNames.Exit}");
-            Console.WriteLine("save state (maybe) and close app");
+            Console.WriteLine("Save current state to a local xml file and close app");
         }
     }
 }

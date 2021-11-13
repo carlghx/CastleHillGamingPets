@@ -87,6 +87,10 @@ namespace CastleHillGamingPets.Application
 
         public void TimePasses(long minutes)
         {
+            if (minutes < 0)
+            {
+                throw new ArgumentException();
+            }
             TimeSinceLastRestock += minutes;
             if (TimeSinceLastRestock >= Timers.PetRestock)
             {
