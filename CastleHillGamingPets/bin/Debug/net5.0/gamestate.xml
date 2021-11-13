@@ -8,7 +8,7 @@
   </Store>
   <Pets>
     <Pet xsi:type="Dog">
-      <Name>dog</Name>
+      <Name>d</Name>
       <Happiness>5</Happiness>
       <MaxHappiness>10</MaxHappiness>
       <Hunger>2</Hunger>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CastleHillGamingPets.Application
 {
+    [Serializable]
     public class AppState
     {
         public Store Store { get; set; }

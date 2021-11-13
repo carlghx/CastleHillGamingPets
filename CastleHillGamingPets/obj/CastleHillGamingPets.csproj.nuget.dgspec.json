@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets.csproj": {}
+    "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets\\CastleHillGamingPets.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets.csproj": {
+    "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets\\CastleHillGamingPets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets.csproj",
+        "projectUniqueName": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets\\CastleHillGamingPets.csproj",
         "projectName": "CastleHillGamingPets",
-        "projectPath": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets.csproj",
+        "projectPath": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets\\CastleHillGamingPets.csproj",
         "packagesPath": "C:\\Users\\carlmorita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\obj\\",
+        "outputPath": "C:\\Users\\carlmorita\\Documents\\GitHub\\CastleHillGamingPets\\CastleHillGamingPets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carlmorita\\AppData\\Roaming\\NuGet\\NuGet.Config",

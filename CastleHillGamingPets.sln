@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastleHillGamingPets", "..\..\..\source\repos\CastleHillGamingPets\CastleHillGamingPets\CastleHillGamingPets.csproj", "{74DE9985-D05E-44B7-BF4F-F6E7CEB4E640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastleHillGamingPets", "CastleHillGamingPets\CastleHillGamingPets.csproj", "{4ACF0F61-28CC-4608-868B-24F96EFFA7A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{74DE9985-D05E-44B7-BF4F-F6E7CEB4E640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74DE9985-D05E-44B7-BF4F-F6E7CEB4E640}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74DE9985-D05E-44B7-BF4F-F6E7CEB4E640}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74DE9985-D05E-44B7-BF4F-F6E7CEB4E640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ACF0F61-28CC-4608-868B-24F96EFFA7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ACF0F61-28CC-4608-868B-24F96EFFA7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ACF0F61-28CC-4608-868B-24F96EFFA7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ACF0F61-28CC-4608-868B-24F96EFFA7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

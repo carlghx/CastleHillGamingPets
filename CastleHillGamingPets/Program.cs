@@ -97,9 +97,10 @@ namespace CastleHillGamingPets
             var petName = command.GetArg(1);
             if (string.IsNullOrEmpty(intName) || string.IsNullOrEmpty(petName))
             {
-                Console.WriteLine($"Must specify interaction and pet name. Format is {CommandNames.Interact} {string.Join('|', Enum.GetNames(typeof(eInteraction)))} name");
+                Console.WriteLine($"Must specify interaction and pet name. {CommandNames.Interact} {string.Join('|', Enum.GetNames(typeof(eInteraction)))} petname");
                 return;
             }
+
             var pet = app.Pets.FirstOrDefault(p => string.Equals(p.Name, petName, StringComparison.InvariantCultureIgnoreCase));
             if (pet == null)
             {
@@ -108,14 +109,14 @@ namespace CastleHillGamingPets
             }
             if (!Enum.TryParse<eInteraction>(intName, true, out eInteraction interaction))
             {
-                Console.WriteLine($"Couldn't use interaction: {intName}. Valid types are: {string.Join('|', Enum.GetNames(typeof(eInteraction)))}");
+                Console.WriteLine($"Couldn't use interaction: {intName}. Valid options are {string.Join('|', Enum.GetNames(typeof(eInteraction)))}");
                 return;
             }
 
-            Console.WriteLine($"Using {intName} with {petName}");
             pet.Interact(interaction);
-            app.TimePasses(TimeCosts.FeedPet);
+            app.TimePasses(TimeCosts.InteractPet);
         }
+
 
         private static void Feed(Command command)
         {
@@ -123,9 +124,10 @@ namespace CastleHillGamingPets
             var petName = command.GetArg(1);
             if (string.IsNullOrEmpty(foodName) || string.IsNullOrEmpty(petName))
             {
-                Console.WriteLine($"Must specify food and pet name. Format is {CommandNames.Feed} {string.Join('|', Enum.GetNames(typeof(eFood)))} name");
+                Console.WriteLine($"Must specify food and pet name. {CommandNames.Feed} {string.Join('|', Enum.GetNames(typeof(eFood)))} petname");
                 return;
             }
+
             var pet = app.Pets.FirstOrDefault(p => string.Equals(p.Name, petName, StringComparison.InvariantCultureIgnoreCase));
             if (pet == null)
             {
@@ -134,11 +136,10 @@ namespace CastleHillGamingPets
             }
             if (!Enum.TryParse<eFood>(foodName, true, out eFood food))
             {
-                Console.WriteLine($"Couldn't use food: {foodName}. Valid types are: {string.Join('|', Enum.GetNames(typeof(eFood)))}");
+                Console.WriteLine($"Couldn't use food: {foodName}. Valid options are {string.Join('|', Enum.GetNames(typeof(eFood)))}");
                 return;
             }
 
-            Console.WriteLine($"Feeding {foodName} to {petName}");
             pet.Eat(food);
             app.TimePasses(TimeCosts.FeedPet);
         }
@@ -173,6 +174,7 @@ namespace CastleHillGamingPets
             if (!app.Pets.Any())
             {
                 Console.WriteLine($"Empty; use {CommandNames.Add} command to buy pets");
+                return;
             }
             
             foreach (var pet in app.Pets)
@@ -231,6 +233,7 @@ namespace CastleHillGamingPets
 
         private static void Exit()
         {
+            // possible todo: save state?
             AppStateLoader.SaveState(app);
             Environment.Exit(0);
         }
@@ -256,16 +259,16 @@ namespace CastleHillGamingPets
             Console.WriteLine("Remove pet with the specified name from your collection");
 
             Console.WriteLine("");
-            Console.WriteLine($"{CommandNames.Feed}|{CommandAliases.Feed} ({string.Join('|', Enum.GetNames(typeof(eFood)))}) petname");
-            Console.WriteLine("Feed the specified food to the pet with that name");
+            Console.WriteLine($"{CommandNames.Feed}|{CommandAliases.Feed} {string.Join('|', Enum.GetNames(typeof(eFood)))} petname");
+            Console.WriteLine("Give specified food to the pet with specified name");
 
             Console.WriteLine("");
-            Console.WriteLine($"{CommandNames.Interact}|{CommandAliases.Interact} ({string.Join('|', Enum.GetNames(typeof(eInteraction)))}) petname");
-            Console.WriteLine("Use the specified interaction with the pet of that name");
+            Console.WriteLine($"{CommandNames.Interact}|{CommandAliases.Interact} {string.Join('|', Enum.GetNames(typeof(eInteraction)))} petname");
+            Console.WriteLine("Perform the specified interaction on the pet with the specified name");
 
             Console.WriteLine("");
             Console.WriteLine($"{CommandNames.Exit}");
-            Console.WriteLine("Save state to a local xml file and exit. The app will attempt to read from the file the next time you start.");
+            Console.WriteLine("save state (maybe) and close app");
         }
     }
 }
