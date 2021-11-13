@@ -1,0 +1,16 @@
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.csproj.AssemblyReference.cache
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.AssemblyInfoInputs.cache
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.AssemblyInfo.cs
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.csproj.CoreCompileInputs.cache
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.exe
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.deps.json
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.runtimeconfig.json
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.runtimeconfig.dev.json
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.dll
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\ref\CastleHillGamingPets.dll
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\bin\Debug\net5.0\CastleHillGamingPets.pdb
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.dll
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\ref\CastleHillGamingPets.dll
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.pdb
+C:\Users\carlmorita\source\repos\CastleHillGamingPets\obj\Debug\net5.0\CastleHillGamingPets.genruntimeconfig.cache
