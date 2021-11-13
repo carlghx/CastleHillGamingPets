@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<AppState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Store>
+    <DogCount>1</DogCount>
+    <CatCount>2</CatCount>
+    <PlantCount>2</PlantCount>
+    <FishCount>2</FishCount>
+  </Store>
+  <Pets>
+    <Pet xsi:type="Dog">
+      <Name>dog</Name>
+      <Happiness>5</Happiness>
+      <MaxHappiness>10</MaxHappiness>
+      <Hunger>2</Hunger>
+      <HungerThreshold>10</HungerThreshold>
+    </Pet>
+  </Pets>
+  <TimeElapsedMinutes>1</TimeElapsedMinutes>
+</AppState>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace CastleHillGamingPets.Application
 {
+    [Serializable]
     public class Store
     {
         public int DogCount { get; set; }
