@@ -1,6 +1,5 @@
 using CastleHillGamingPets.Pets;
 using NUnit.Framework;
-using System.Collections;
 
 namespace Tests.FeedTests
 {

@@ -2,7 +2,6 @@
 using CastleHillGamingPets.Consts;
 using CastleHillGamingPets.Pets;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace CastleHillGamingPets
